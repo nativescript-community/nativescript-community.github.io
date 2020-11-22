@@ -39,7 +39,11 @@
   }
 
   function hasDocs(item) {
-    return "homepage" in item.package.links;
+    if("homepage" in item.package.links) {
+      if(item.package.links.homepage.includes("github.io"))
+        return true;
+    }
+    return false;
   }
 
   function hasRepo(item) {
