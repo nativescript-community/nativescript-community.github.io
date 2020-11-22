@@ -9,7 +9,6 @@
 			<!-- 
 			<a href="#" target="_blank" class="nav-link pr-3 pl-0">Footer Link 1</a>
 			<a href="#" target="_blank" class="nav-link px-3">Footer Link 2</a>
-			<a href="#" target="_blank" class="nav-link pl-3 pr-0">Footer Link 3</a> 
 			-->
 		</div>
 	</div>
