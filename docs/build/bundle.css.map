@@ -1,0 +1,12 @@
+{
+  "version": 3,
+  "file": "bundle.css",
+  "sources": [
+    "FrameworkFilter.svelte"
+  ],
+  "sourcesContent": [
+    "<script lang=\"ts\">export let frameworkFilter;\nimport { createEventDispatcher } from 'svelte';\nimport AngularIcon from './icons/AngularIcon.svelte';\nimport VueIcon from './icons/VueIcon.svelte';\nimport SvelteIcon from './icons/SvelteIcon.svelte';\nimport ReactIcon from './icons/ReactIcon.svelte';\nconst dispatch = createEventDispatcher();\nfunction toggleFramework(framework) {\n    dispatch('toggle', {\n        framework: framework\n    });\n}\n</script> \n\n<style>\n\n    .framework-angular {\n      background-color: #f1d3d4; \n      border-color: #FFFFFF\n    }\n  \n    .framework-vue {\n      background-color: #caf1e5; \n      border-color: #FFFFFF\n    }\n  \n    .framework-svelte {\n      background-color: #ffd6cf; \n      border-color: #FFFFFF\n    }\n  \n    .framework-react {\n      background-color: #d0f6fe; \n      border-color: #FFFFFF\n    }\n  \n    .disabled {\n      background-color: rgb(226, 226, 226); \n      fill-opacity: 60%;\n    }\n  \n</style>\n\n<div class=\"btn-group btn-group-lg\" role=\"group\" aria-label=\"Framework\">\n    <button href=\"#\" class=\"svg-icon btn framework-angular\" on:click={() => toggleFramework('angular')} class:disabled=\"{!frameworkFilter.includes('angular')}\">\n        <AngularIcon />\n    </button>\n    <button class=\"svg-icon btn framework-vue\" on:click={() => toggleFramework('vue')} class:disabled=\"{!frameworkFilter.includes('vue')}\">\n        <VueIcon />\n    </button>\n    <button  class=\"svg-icon btn framework-svelte\" on:click={() => toggleFramework('svelte')} class:disabled=\"{!frameworkFilter.includes('svelte')}\">\n        <SvelteIcon />\n    </button>\n    <button class=\"svg-icon btn framework-react\" on:click={() => toggleFramework('react')} class:disabled=\"{!frameworkFilter.includes('react')}\">\n        <ReactIcon />\n    </button>\n</div>"
+  ],
+  "names": [],
+  "mappings": "AAgBI,kBAAkB,eAAC,CAAC,AAClB,gBAAgB,CAAE,OAAO,CACzB,YAAY,CAAE,OAAO;IACvB,CAAC,AAED,cAAc,eAAC,CAAC,AACd,gBAAgB,CAAE,OAAO,CACzB,YAAY,CAAE,OAAO;IACvB,CAAC,AAED,iBAAiB,eAAC,CAAC,AACjB,gBAAgB,CAAE,OAAO,CACzB,YAAY,CAAE,OAAO;IACvB,CAAC,AAED,gBAAgB,eAAC,CAAC,AAChB,gBAAgB,CAAE,OAAO,CACzB,YAAY,CAAE,OAAO;IACvB,CAAC,AAED,SAAS,eAAC,CAAC,AACT,gBAAgB,CAAE,IAAI,GAAG,CAAC,CAAC,GAAG,CAAC,CAAC,GAAG,CAAC,CACpC,YAAY,CAAE,GAAG,AACnB,CAAC"
+}
