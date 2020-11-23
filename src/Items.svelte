@@ -25,25 +25,23 @@
     await query(itemsToLoad)
       .then((r) => r.json())
       .then((data) => {
-        for(let i=0; i<data.results.length; i++) {
-          // console.log(data.results[i].package)
-          if("keywords" in data.results[i].package) {
-            data.results[i].package.preview = [];
-            for(const preview_raw of data.results[i].package.keywords) {
+        for(let i=0; i<data.objects.length; i++) {
+          if("keywords" in data.objects[i].package) {
+            data.objects[i].package.preview = [];
+            for(const preview_raw of data.objects[i].package.keywords) {
               if(preview_raw.includes("preview")) {
                 const preview_parsed = preview_raw.split("|");
                 console.log(preview_parsed)
-                data.results[i].package.preview.push({
+                data.objects[i].package.preview.push({
                   url: preview_parsed[1],
                   ...(preview_parsed.length > 2 ? { label: preview_parsed[2] } : {})
                 })
-                // break;
               }
             }
           }
         }
-        originalData = data.results;
-        displayedData = data.results;
+        originalData = data.objects;
+        displayedData = data.objects;
 
         filterAndOrder();
         isLoaded = true;
