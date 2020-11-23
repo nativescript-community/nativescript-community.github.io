@@ -149,7 +149,7 @@
             <div class="col-3">
               <div class="btn-group btn-group-sm float-right" role="group" aria-label="Links">
                 {#if hasDocs(item) }
-                  <a href={item.package.links.npm} class="svg-icon btn btn-outline-secondary">
+                  <a href={item.package.links.homepage} class="svg-icon btn btn-outline-secondary">
                     <DocsIcon />
                   </a>
                 {/if}
