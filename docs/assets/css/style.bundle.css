@@ -6,7 +6,7 @@
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
  */
 :root {
-  --blue: #2847d2;
+  --blue: #65ADF1;
   --indigo: #6610f2;
   --purple: #6f42c1;
   --pink: #e83e8c;
@@ -5969,7 +5969,7 @@ a.close.disabled {
   vertical-align: text-top !important; }
 
 .bg-primary {
-  background-color: #2847d2 !important; }
+  background-color: #65ADF1 !important; }
 
 a.bg-primary:hover, a.bg-primary:focus,
 button.bg-primary:hover,
@@ -60445,7 +60445,7 @@ body {
       -webkit-box-align: stretch;
       -ms-flex-align: stretch;
       align-items: stretch;
-      background-color: #2847d2; }
+      background-color: #65ADF1; }
       .header .header-top .container,
       .header .header-top .container-fluid,
       .header .header-top .container-sm,
